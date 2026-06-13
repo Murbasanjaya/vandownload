@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "functions": {
+    "api/*.js": {
+      "memory": 512,
+      "maxDuration": 30
+    }
+  },
+  "routes": [
+    {
+      "src": "/api/download",
+      "dest": "/api/download.js"
+    },
+    {
+      "src": "/api/proxy-download",
+      "dest": "/api/proxy-download.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/public/$1"
+    }
+  ]
+}
